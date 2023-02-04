@@ -1,0 +1,17 @@
+<BODY>
+    <article id="kiyaku" />
+
+    <script>
+        fetch('https://947yusm0xl.microcms.io/api/v1/kiyaku',
+            { headers: { "X-MICROCMS-API-KEY": "UGcR4aweCfES1tUJnUOdkGEtuMJk1QvZ2iai" } })
+            .then((res) => {
+                return res.json();
+            })
+            .then((json) => {
+                document.getElementById("kiyaku").innerHTML = json.body;
+            })
+            .catch((reason) => {
+                console.log(reason);
+            });
+    </script>
+</BODY>
